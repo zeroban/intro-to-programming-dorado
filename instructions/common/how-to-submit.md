@@ -18,6 +18,8 @@
 
 ## Step 4: Click "Submit" and you're done!
 
+![Submit Assignment: Step 4](../assets/submit-assignment/step-4-squibbyV2.png)
+
 ---
 
 Created by [Code the Dream](https://www.codethedream.org)
