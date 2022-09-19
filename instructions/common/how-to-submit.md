@@ -2,7 +2,7 @@
 
 # How to: Submit an Assignment
 
-## Step 1: In your Slack class announcements channel click the Submit Assignment bookmark OR at the bottom of your lesson page click the link for Homework Assignment Submission Form.  You can also get to the submission form using this link: [Assignment Submission Form](https://airtable.com/shrBpqHbS6wgInoF9)
+## Step 1: In your Slack class announcements channel click the Submit Assignment bookmark OR at the bottom of your lesson page click the link for Homework Assignment Submission Form.  You can also get to the submission form using this link: <a href="https://airtable.com/shrBpqHbS6wgInoF9" target="_blank">Assignment Submission Form</a>
 
 ![Submit Assignment: Step 1](../assets/submit-assignment/getting-to-submission-form.png)
 
