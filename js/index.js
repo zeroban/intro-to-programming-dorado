@@ -1,9 +1,7 @@
 //Creates an object that stores the different date methods
 var theDate = new Date(),
     thisYear = theDate.getFullYear(),
-    thisMonth = theDate.getMonth(),
-    date = theDate.getDate(),
-    thisDay = theDate.getDate();
+    today = theDate.getDate();
 
 //Selects the footer element 
 const footer = document.querySelector("footer");
@@ -12,14 +10,14 @@ const footer = document.querySelector("footer");
 const copyright = document.createElement("p");
 
 //sets the innner HTML to the copyright element previously created to display my name and year
-document.querySelector("footer").innerHTML = "© " + thisYear + " David Jaimes";
+copyright.innerHTML ="David Jaimes " + thisYear;
 
 //will append the copyright element to the footer to display it "will overright the text in HTML file"
 footer.appendChild(copyright);
 
 //Creating List of Skills part
 //creating an array of technical skills
-var skills = ["problem-solving", "Leadership", "Web Development", "Integrated development environments (IDEs)"];
+var skills = ["Problem-Solving", "Leadership", "Web Development", "Integrated development environments (IDEs)"];
 
 //Using DOM Selection to get id and assign it to a variable 
 const skillsSection = document.getElementById("skills");
@@ -39,4 +37,11 @@ for ( var i = 0; i < arraylength; i++) {
 
     //will append "li" to skillsList
     skillsList.appendChild(skill);
+}
+
+//Assignment 4.3 section
+messageForm = document.getElementsByName("leave_message")
+messageForm = addEventListener("submit", myFunction);
+function myFunction() {
+    console.log("name");
 }
