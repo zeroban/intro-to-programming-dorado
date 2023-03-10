@@ -5,29 +5,17 @@
     <title>David Jaimes</title>
     <meta charset="UTF-8">
     <meta name="decription" content="Portfolio">
-    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
     <!-- Nav bar is mainly here for my testing of it and will eventually lead to other pages.-->
-    <nav>
-        <div class="navLogo">
-            <p>David Jaimes</p>
-        </div>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#connection">Connection</a></li>
-        </ul>
-        <div class="img">
-            <ul>
-                <a href="https://github.com/zeroban"><img src="images/github.png" alt="git"></a>
-                <a href="https://github.com/zeroban"><img src="images/email_icon.png" alt="email"></a>
-            </ul>
-            </ul>
-        </div>
-    </nav>
-    <section class="about">
+    <div class="navBar">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#connection">Connection</a>
+        <button onclick="alert('I hope my small nav bar testing does not effect how i get graded')">Testing Button</button>
+    </div>
+    <section>
         <h1>About</h1>
         <p>
             I am 30years old. I have a Degree in Information Technology with a consintrate in Mobile App Development. I
@@ -37,7 +25,7 @@
             work.
         </p>
     </section>
-    <section class="exp">
+    <section>
         <h1>experience</h1>
         <ul>
             <li>Bloomerang - 11/15/2021 - present</li>
@@ -66,30 +54,35 @@
 
 <!---will create a section for the form-->
 <section>
+
     <h2>Leave a Message</h2>
     <form name="leave_message">
-        <br>
+
         <!-- Will create create form elements-->
         <label for="name">Name:</label>
-        <input type="text" name="name" required="true">
-        </br>
+        <input type="text" name="userName" id="name" required>
+        <br>
+        
         <br>
         <label for="email">Email:</label>
-        <input type="email" name="email" required="true">
-        </br>
-        <label for="message">Message</label>
+        <input type="email" name="userEmail" id="email" required>
         <br>
-        <textarea name="message" required="true"></textarea>
-        </br>
+
+        <br>
+        <label for="message">Message:</label>
+        <textarea name="usersMessage" id="userMessage" required></textarea>
+        <br>
         <button type="submit">Submit</button>
     </form>
+
 </section>
 
-<!---Will create a second form --->
-<section id="messages">
+<!---Will create a second form Listing--->
+<section id="messages" >
     <h2>Messages</h2>
-    <ul></ul>
-
+    <ul>
+        
+    </ul>
 </section>
 <footer></footer>
 <script src="js/index.js"></script>

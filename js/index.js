@@ -1,4 +1,5 @@
 //Creating List of Skills part
+
 //creating an array of technical skills
 var skills = ["Problem-Solving", "Leadership", "Web Development", "Integrated development environments (IDEs)"];
 
@@ -22,12 +23,8 @@ for ( var i = 0; i < arraylength; i++) {
     skillsList.appendChild(skill);
 }
 
+
 //Assignment 4.3 section
-messageForm = document.getElementsByName("leave_message")
-messageForm = addEventListener("submit", myFunction);
-function myFunction() {
-    console.log("name");
-}
 
 //Will hide the "Messages" html section until the submit button is clicked
 document.getElementById("messages").style.display = "none";
@@ -48,7 +45,7 @@ document.addEventListener("submit", function(event) {
     const email = event.target.userEmail.value;
     const message = event.target.userMessage.value;
     console.log(name, email, message);
-
+    
     const messageList = messageSection.querySelector("ul");
 
     const newMessage = document.createElement("li");
@@ -57,7 +54,7 @@ document.addEventListener("submit", function(event) {
 
     //will append the newMessage list to the unordered list
     messageList.appendChild(newMessage);
-
+        
 
 
 //========================== REMOVE BUTTON  ===========================//
@@ -66,7 +63,7 @@ document.addEventListener("submit", function(event) {
     //Create a new button called "Remove"
     const removeButton = document.createElement("button");
     removeButton.innerText = "remove";
-
+    
     //Event listener for when the button if clicked will delete the newMessage (li)
     removeButton.addEventListener("click", () => {
         event.preventDefault();
@@ -75,7 +72,7 @@ document.addEventListener("submit", function(event) {
 
 
 
-
+ 
 
 //========================== EDIT BUTTON  ===========================//
 
@@ -101,7 +98,7 @@ document.addEventListener("submit", function(event) {
     newMessage.appendChild(editButton);
     //will append the remove button to the newMessage 
     newMessage.appendChild(removeButton);
-
+    
     messageForm[0].reset();
 
 });
