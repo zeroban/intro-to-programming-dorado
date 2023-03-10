@@ -1,20 +1,3 @@
-//Creates an object that stores the different date methods
-var theDate = new Date(),
-    thisYear = theDate.getFullYear(),
-    today = theDate.getDate();
-
-//Selects the footer element 
-const footer = document.querySelector("footer");
-
-//creates a new paragraph element and stores it in the variable 
-const copyright = document.createElement("p");
-
-//sets the innner HTML to the copyright element previously created to display my name and year
-copyright.innerHTML ="David Jaimes " + thisYear;
-
-//will append the copyright element to the footer to display it "will overright the text in HTML file"
-footer.appendChild(copyright);
-
 //Creating List of Skills part
 //creating an array of technical skills
 var skills = ["Problem-Solving", "Leadership", "Web Development", "Integrated development environments (IDEs)"];
@@ -45,3 +28,99 @@ messageForm = addEventListener("submit", myFunction);
 function myFunction() {
     console.log("name");
 }
+
+//Will hide the "Messages" html section until the submit button is clicked
+document.getElementById("messages").style.display = "none";
+
+
+const messageForm = document.getElementsByName("leave_message");
+const messageSection = document.getElementById("messages");
+
+document.addEventListener("submit", function(event) {
+    //prevents the page from auto refreshing
+    event.preventDefault(); 
+
+    //will unhide the messages section once there is something submitted 
+    document.getElementById("messages").style.display = "inline";
+
+
+    const name = event.target.userName.value;
+    const email = event.target.userEmail.value;
+    const message = event.target.userMessage.value;
+    console.log(name, email, message);
+
+    const messageList = messageSection.querySelector("ul");
+
+    const newMessage = document.createElement("li");
+
+    newMessage.innerHTML = `<a href="mailto:${email}">${name}</a> <span>${message}</span>`;
+
+    //will append the newMessage list to the unordered list
+    messageList.appendChild(newMessage);
+
+
+
+//========================== REMOVE BUTTON  ===========================//
+
+
+    //Create a new button called "Remove"
+    const removeButton = document.createElement("button");
+    removeButton.innerText = "remove";
+
+    //Event listener for when the button if clicked will delete the newMessage (li)
+    removeButton.addEventListener("click", () => {
+        event.preventDefault();
+        newMessage.remove();
+    });
+
+
+
+
+
+//========================== EDIT BUTTON  ===========================//
+
+    //Creates a new "Edit" button
+    const editButton = document.createElement("button");
+    editButton.innerText = 'edit';
+
+    //creates an event listener for when they click the edit button
+    editButton.addEventListener("click", () => {
+
+        //will show a prompt window at the top to edit the "message" section 
+        let editMessage = prompt("Edit your message? ", `${message}`)
+        newMessage.innerHTML = `<a href="mailto:${email}">${name}</a> <span>${editMessage}</span>`;
+        newMessage.appendChild(editButton);
+
+        newMessage.appendChild(removeButton);
+
+    })
+
+    //will add margins around the edit button to give it a bit cleaner look
+    editButton.style.margin = "10px";
+    //Will append the edit button to the newMessage section
+    newMessage.appendChild(editButton);
+    //will append the remove button to the newMessage 
+    newMessage.appendChild(removeButton);
+
+    messageForm[0].reset();
+
+});
+
+//===================== Footer Section ================================//
+
+//Creates an object that stores the different date methods
+var theDate = new Date(),
+    thisYear = theDate.getFullYear(),
+    today = theDate.getDate();
+
+//Selects the footer element 
+const footer = document.querySelector("footer");
+
+//creates a new paragraph element and stores it in the variable 
+const copyright = document.createElement("p");
+
+//sets the innner HTML to the copyright element previously created to display my name and year
+copyright.innerHTML ="David Jaimes " + thisYear;
+
+//will append the copyright element to the footer to display it "will overright the text in HTML file"
+footer.appendChild(copyright);

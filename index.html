@@ -5,17 +5,29 @@
     <title>David Jaimes</title>
     <meta charset="UTF-8">
     <meta name="decription" content="Portfolio">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
     <!-- Nav bar is mainly here for my testing of it and will eventually lead to other pages.-->
-    <div class="navBar">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#connection">Connection</a>
-        <button onclick="alert('I hope my small nav bar testing does not effect how i get graded')">Click me</button>
-    </div>
-    <section>
+    <nav>
+        <div class="navLogo">
+            <p>David Jaimes</p>
+        </div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#connection">Connection</a></li>
+        </ul>
+        <div class="img">
+            <ul>
+                <a href="https://github.com/zeroban"><img src="images/github.png" alt="git"></a>
+                <a href="https://github.com/zeroban"><img src="images/email_icon.png" alt="email"></a>
+            </ul>
+            </ul>
+        </div>
+    </nav>
+    <section class="about">
         <h1>About</h1>
         <p>
             I am 30years old. I have a Degree in Information Technology with a consintrate in Mobile App Development. I
@@ -25,7 +37,7 @@
             work.
         </p>
     </section>
-    <section>
+    <section class="exp">
         <h1>experience</h1>
         <ul>
             <li>Bloomerang - 11/15/2021 - present</li>
@@ -74,7 +86,7 @@
 </section>
 
 <!---Will create a second form --->
-<section id="messages" >
+<section id="messages">
     <h2>Messages</h2>
     <ul></ul>
 
