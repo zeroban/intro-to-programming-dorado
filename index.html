@@ -5,87 +5,142 @@
     <title>David Jaimes</title>
     <meta charset="UTF-8">
     <meta name="decription" content="Portfolio">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <!-- Nav bar is mainly here for my testing of it and will eventually lead to other pages.-->
-    <div class="navBar">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#connection">Connection</a>
-        <button onclick="alert('I hope my small nav bar testing does not effect how i get graded')">Testing Button</button>
-    </div>
+    <header>
+        <!-- Nav bar is mainly here for my testing of it and will eventually lead to other pages.-->
+        <nav class="topBar">
+            <div class="navLogo">
+                <a href="#HomePage"><img src="images/mySelf.png"></a>
+                <p>David Jaimes</p>
+
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#connection">Connection</a></li>
+                </ul>
+
+            </div>
+        </nav>
+        <nav>
+            <div class="img">
+                <ul>
+                    <li><a href="https://github.com/zeroban"><img src="images/icons8-github-100.png"
+                                alt="GitHub_account"></a>
+                    </li>
+                    <li><a href="mailto:David.R.Jaimes@Outlook.com"><img src="images/icons8-circled-envelope-100.png"
+                                alt="email_contact"></a></li>
+                    <li><a href="https://linkedin.com/in/david-jaimes-79bb801a0"><img src="images/icons8-linkedin-circled-100.png"
+                                alt="Linkedin"></a></li>
+                </ul>
+            </div>
+        </nav>
+        <section>
+            <div class="about">
+                <h1>About</h1>
+                <p>
+                    I am 31 years old. I have a Degree in Information Technology with a consintrate in Mobile App
+                    Development. Aspiring software developer with over 8+ years in customer service. Specializing in
+                    programming software.
+                    A proven track record for problem-solving and customer satisfaction.
+                    Currently I am studing with Code The Dream to further my understanding of how different coding
+                    languages
+                    work.
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="exp">
+                <h1>experience</h1>
+                <ul>
+                    <li>Bloomerang - 11/15/2021 - Present</li>
+                    <li>Customer Support Specialist</li>
+                    <li>Assist clients with database management</li>
+                    <li>Problem-solving any issues</li>
+                    <li>Collaborate with other departments to test and create new functionalities</li>
+                    <li>Advised clients of the best data import procedures</li>
+                    <li>Consistently achieved and surpassed monthly objectives</li>
+                </ul>
+
+                <ul>
+                    <li>T-Mobile - 01/1/2018 - 05/1/2021</li>
+                    <li>Mobile Export</li>
+                    <li>Equipped customers with the ideal equipment based on what worked best for their daily lives.
+                    </li>
+                    <li>Establish relationships with our customers.</li>
+                    <li>Audit accounts.</li>
+                    <li>Troubleshoot account and device issues.</li>
+                </ul>
+
+                <ul>
+                    <li>Yellow Dot Heating & Air Conditioning - 01/1/2015 - 1/1/2018</li>
+                    <li>Officer Dispatcher</li>
+                    <li>Getting the office open and sending teams to their job sites</li>
+                    <li>Managed the ordering of new tools for both brand-new and old job locations</li>
+                    <li>handled all shipments from the warehouse</li>
+                    <li>Furnished new hires with the equipment they needed to carry out a range of tasks.</li>
+                </ul>
+
+            </div>
+        </section>
+        <section id="skills">
+            <div class="mySkills">
+                <h2>skills</h2>
+                <ul></ul>
+            </div>
+        </section>
+
+        <section id="connections">
+            <h1>Connection</h1>
+            <dl>
+                <dt><a href="mailto:David.R.Jaimes@Outlook.com"> Email</a></dt>
+                <dt><a href="https://github.com/zeroban"> GitHub</a></dt>
+                <dt> <a href="https://linkedin.com/in/david-jaimes-79bb801a0"> Linkedin</a></dt>
+            </dl>
+        </section>
+    </header>
+
+    <!---will create a section for the form-->
     <section>
-        <h1>About</h1>
-        <p>
-            I am 30years old. I have a Degree in Information Technology with a consintrate in Mobile App Development. I
-            am
-            aspiring to become a developer.
-            Currently I am studing with Code The Dream to further my understanding of how different coding languages
-            work.
-        </p>
+        <div class="lower-banner">
+
+            <h2>Leave a Message</h2>
+            <form name="leave_message">
+                <div class="name">
+                    <!-- Will create create form elements-->
+                    <label for="name">Name:</label>
+                    <input type="text" name="userName" placeholder=" Enter Your Name" id="name" required>
+                    <br>
+                </div>
+                <div class="email">
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" name="userEmail" placeholder=" YourEmail@example.com" id="email" required>
+                    <br>
+                </div>
+                <div class="messages">
+                    <br>
+                    <label for="message">Message:</label>
+                    <textarea name="usersMessage" id="userMessage" placeholder=" Enter your message here"  required></textarea>
+                    <br>
+                </div>
+                <button type="submit" class="subButton">Submit</button>
+            </form>
+
     </section>
-    <section>
-        <h1>experience</h1>
+
+    <!---Will create a second form Listing--->
+    <section id="messages">
+        <h2>Messages</h2>
         <ul>
-            <li>Bloomerang - 11/15/2021 - present</li>
-            <li>- Customer Support Specialist</li>
 
-            <li>Instrust Insurance Agency - 05/1/2021 - 11/15/2021</li>
-            <li>- Insurance Agent</li>
-
-            <li>T-Mobile - 01/1/2018 - 05/1/2021</li>
-            <li>- Mobile Export</li>
         </ul>
+        </div>
     </section>
-    <section id="skills">
-        <h2>skills</h2>
-        <ul></ul>
-    </section>
-    <section>
-        <h1>Connection</h1>
-        <dl>
-            <dt><a href="mailto:David.R.Jaimes@Outlook.com"> Email</a></dt>
-            <dt><a href="https://github.com/zeroban"> GitHub</a></dt>
-            <dt> <a href="https://linkedin.com/in/david-jaimes-79bb801a0"> Linkedin</a></dt>
-        </dl>
-    </section>
-</body>
-
-<!---will create a section for the form-->
-<section>
-
-    <h2>Leave a Message</h2>
-    <form name="leave_message">
-
-        <!-- Will create create form elements-->
-        <label for="name">Name:</label>
-        <input type="text" name="userName" id="name" required>
-        <br>
-        
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" name="userEmail" id="email" required>
-        <br>
-
-        <br>
-        <label for="message">Message:</label>
-        <textarea name="usersMessage" id="userMessage" required></textarea>
-        <br>
-        <button type="submit">Submit</button>
-    </form>
-
-</section>
-
-<!---Will create a second form Listing--->
-<section id="messages" >
-    <h2>Messages</h2>
-    <ul>
-        
-    </ul>
-</section>
-<footer></footer>
-<script src="js/index.js"></script>
+    <footer></footer>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

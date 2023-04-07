@@ -62,7 +62,8 @@ document.addEventListener("submit", function(event) {
 
     //Create a new button called "Remove"
     const removeButton = document.createElement("button");
-    removeButton.innerText = "remove";
+    removeButton.innerText = "Remove";
+    removeButton.id = "remove_button";
     
     //Event listener for when the button if clicked will delete the newMessage (li)
     removeButton.addEventListener("click", () => {
@@ -78,7 +79,8 @@ document.addEventListener("submit", function(event) {
 
     //Creates a new "Edit" button
     const editButton = document.createElement("button");
-    editButton.innerText = 'edit';
+    editButton.innerText = 'Edit';
+    editButton.id = "edit_button"
 
     //creates an event listener for when they click the edit button
     editButton.addEventListener("click", () => {
