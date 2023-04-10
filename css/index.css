@@ -20,7 +20,7 @@ nav .navLogo p {
     cursor: pointer;
     margin-top: 25px;
     margin-left: 10px;
-    
+
 }
 
 
@@ -32,7 +32,8 @@ nav .navLogo img {
     animation: none;
 
 }
- /* Controls the about, exp, and connct menu in the middle */
+
+/* Controls the about, exp, and connct menu in the middle */
 nav .navLogo ul {
     padding-top: 50px;
     padding-left: 300px;
@@ -41,15 +42,15 @@ nav .navLogo ul {
 
 }
 
-/* makes it so the middle name is in line and has not bullet style next to it */ 
+/* makes it so the middle name is in line and has not bullet style next to it */
 nav .navLogo li {
     display: inline-block;
     list-style: none;
 
 }
 
-/* controls the actual text in the middle of the name */ 
-nav .navLogo li a{
+/* controls the actual text in the middle of the name */
+nav .navLogo li a {
     font-size: 18px;
     text-transform: uppercase;
     color: rgb(0, 0, 0);
@@ -68,15 +69,16 @@ nav li a:hover {
 
 
 /* controls the images on the right hand side */
-.img ul li{
+.img ul li {
     float: right;
     margin-top: -65px;
     margin-left: -20;
     width: 60px;
-    height: 75px;    
+    height: 75px;
     list-style: none;
 
 }
+
 img {
     height: 50px;
 }
@@ -87,24 +89,56 @@ img {
 img:hover {
     animation: spin 1s;
     animation-iteration-count: infinite;
-  }
-  
-  @keyframes spin {
-    0% { transform:  rotate(0deg); }
-    10% { transform: rotate(36deg); }
-    20% { transform: rotate(72deg); }
-    30% { transform: rotate(108deg); }
-    40% { transform: rotate(144deg); }
-    50% { transform: rotate(180deg); }
-    60% { transform: rotate(216deg); }
-    70% { transform: rotate(252deg); }
-    80% { transform: rotate(288deg); }
-    90% { transform: rotate(324deg); }
-    100% { transform: rotate(360deg); }
-  }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(36deg);
+    }
+
+    20% {
+        transform: rotate(72deg);
+    }
+
+    30% {
+        transform: rotate(108deg);
+    }
+
+    40% {
+        transform: rotate(144deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    60% {
+        transform: rotate(216deg);
+    }
+
+    70% {
+        transform: rotate(252deg);
+    }
+
+    80% {
+        transform: rotate(288deg);
+    }
+
+    90% {
+        transform: rotate(324deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 /* =============== Everything below here will be for the about section and lower ========*/
- /*places an image as the background*/
+/*places an image as the background*/
 body {
     /*background-image: url(../images/newyork.jpg);*/
     background-color: antiquewhite;
@@ -115,57 +149,47 @@ body {
 }
 
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-size: 40px;
     margin-left: 150px;
     text-transform: uppercase;
- 
+
 }
 
 .about p {
-    background-color: rgb(187, 185, 185);
+    background-color: azure;
     margin-left: 10%;
     padding: 5px 5px;
     inline-size: 75%;
     list-style: none;
 }
 
-.about , .exp, .mySkills {
+.about,
+.exp,
+.mySkills {
     margin-top: 5%;
 }
 
-
-.exp ul:nth-child(2) {
-    background-color: rgb(187, 185, 185);
-    margin: 0px 10%;
-    inline-size: 75%;
-    font-size: 20px;
+/*controlls the experiance tab */
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-weight: bold;
+    background-color: azure;
 
 }
-
-.exp ul:nth-child(3) {
-    background-color: rgb(252, 252, 252);
-    margin: 0px 10%;
-    inline-size: 75%;
-    font-size: 20px;
- 
- }
-
- .exp ul:nth-child(4) {
-    background-color: rgb(187, 185, 185);
-    margin: 0px 10%;
-    inline-size: 75%;
-    font-size: 20px;
- 
- }
- 
 
 .exp li:nth-child(1) {
-    display: inline-block;
-    font-weight: bold;
-    margin: 0.2% 1%;
+    align-self: center;
+    list-style: none;
+    margin: 0.5%;
 }
-
 
 
 /*controls the position I helped li element */
@@ -179,74 +203,58 @@ h1, h2, h3 {
 }
 
 /*controls the multiple li elements under the role title */
-.exp li:nth-child(3), .exp li:nth-child(4), .exp li:nth-child(5), .exp li:nth-child(6), .exp li:nth-child(7)  {
+.exp li:nth-child(3),
+.exp li:nth-child(4),
+.exp li:nth-child(5),
+.exp li:nth-child(6),
+.exp li:nth-child(7) {
     margin-left: 15%;
     font-size: 15px;
-    
+
 }
 
 
 /* below will control the ul and all the li for the Skills section of the page */
-#skills ul {
-   /* background-color: rgb(187, 185, 185);*/
-    position: left;
-    margin: 0.2% 10%;
-    inline-size: 75%;
-    list-style: none;
-    display: inline-block;
-    font-weight: bolder;
+
+.skill_list {
+    font-weight: bold;
+    background-color: azure;
+    margin-left: 10%;
+    padding: 10px 5px;
+    inline-size: 80%;
+    margin-bottom: 2%;
 }
 
+.skill_list ul {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
 
-#skills li:nth-child(1) {
-    list-style: disc;
-    float: left;
-    width: 15%;
-    margin: 0.5% 50px;
-    font-size: 20px;
 }
 
-#skills li:nth-child(2) {
-    list-style: disc;
-    float: right;
-    width: 15%;
-    margin: 0.5% 50px;
-    font-size: 20px;
-    
-}
-
-#skills li:nth-child(3) {
-    list-style: disc;
-    float: left;
-    width: 15%;
-    margin: 0.5% 50px;
-    font-size: 20px;
-}
-
-#skills li:nth-child(4) {
-    list-style: disc;
-    float: left;
-    width: 25%;
-    margin: 0.5% 50px;
-    font-size: 20px;
-    text-align:initial
+.skill_list li {
+    margin: 0.5% 0%;
 }
 
 
 
-#connections { /*will keep hidden for now - Connections is being displayed at the top right of page */
+
+#connections {
+    /*will keep hidden for now - Connections is being displayed at the top right of page */
     display: inline-block;
     display: none;
 }
 
 
-/* Everything below here is for the lower banner and leave a message */ 
+/* Everything below here is for the lower banner and leave a message */
 .lower-banner {
     background-color: azure;
-    
 }
 
-.name, .email {
+
+
+
+.name,
+.email {
     display: inline-block;
     font-display: none;
     margin: 0.5% 1.5%;
@@ -261,12 +269,19 @@ h1, h2, h3 {
 
 }
 
-#email, #name {
+#email,
+#name {
     width: 114%;
     height: 30px
 }
 
-label[for='name'], label[for='email'], label[for="message"] {
+
+
+
+
+label[for='name'],
+label[for='email'],
+label[for="message"] {
     display: none;
 }
 
@@ -278,8 +293,8 @@ label[for='name'], label[for='email'], label[for="message"] {
     width: 5%;
     height: 2.5%;
     border-radius: 12px;
-    background-color: rgb(240, 236, 236);   
-    padding-bottom: 5px; 
+    background-color: rgb(240, 236, 236);
+    padding-bottom: 5px;
     text-align: center;
     font-weight: bold;
 }
@@ -287,7 +302,7 @@ label[for='name'], label[for='email'], label[for="message"] {
 .subButton:hover {
     transition: all 0.2s ease;
     background-color: rgb(187, 185, 185);
-    cursor: pointer;    
+    cursor: pointer;
 
 }
 
@@ -296,7 +311,7 @@ label[for='name'], label[for='email'], label[for="message"] {
     border-width: 20px;
     border-color: black;
     margin: 1% 30px;
-    list-style:symbols();
+    list-style: symbols();
 }
 
 #remove_button {
@@ -320,12 +335,42 @@ label[for='name'], label[for='email'], label[for="message"] {
 }
 
 
-#edit_button:hover, #remove_button:hover {
+#edit_button:hover,
+#remove_button:hover {
     padding-left: 50px;
     padding-right: 50px;
 }
+
+
+
+
 /*=========== Footer section =================================*/
 
 footer {
     background-color: rgb(139, 139, 139);
+}
+
+
+/* Media Query Testing */
+
+@media (orientation: landscape) {
+    body {
+        background-color: blueviolet;
+    }
+
+}
+
+/* does not seem to be working correctly. VS was giving me errors but I was able to get around it */
+@media (max-width: 500px) and (orientation: portrait) { 
+    .about {
+        background-color: blue;
+    }
+
+}
+
+
+@media only screen and (max-width: 480px) {
+    body {
+        background-color: brown;
+    }
 }
