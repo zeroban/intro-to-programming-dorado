@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="decription" content="Portfolio">
     <link rel="stylesheet" href="css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -15,13 +16,13 @@
             <div class="navLogo">
                 <a href="#HomePage"><img src="images/mySelf.png"></a>
                 <p>David Jaimes</p>
-
-                <ul>
-                    <li><a href="#aboutMe">About</a></li>
-                    <li><a href="#Myexperience">Experience</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                </ul>
-
+                <div class="navHeader">
+                    <ul>
+                        <li><a href="#aboutMe">About</a></li>
+                        <li><a href="#Myexperience">Experience</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <nav>
@@ -116,32 +117,38 @@
 
             <h2>Leave a Message</h2>
             <form name="leave_message">
-                <div class="name">
-                    <!-- Will create create form elements-->
-                    <label for="name">Name:</label>
-                    <input type="text" name="userName" placeholder=" Enter Your Name" id="name" required>
-                    <br>
-                </div>
-                <div class="email">
-                    <br>
-                    <label for="email">Email:</label>
-                    <input type="email" name="userEmail" placeholder=" YourEmail@example.com" id="email" required>
-                    <br>
-                </div>
-                <div class="messages">
-                    <br>
-                    <label for="message">Message:</label>
-                    <textarea name="usersMessage" id="userMessage" placeholder=" Enter your message here"
-                        required></textarea>
-                    <br>
-                </div>
-                <button type="submit" class="subButton">Submit</button>
+                <section class="Containers">
+                    <div class="name">
+                        <!-- Will create create form elements-->
+                        <label for="name">Name:</label>
+                        <input type="text" name="userName" placeholder=" Enter Your Name" id="name" required>
+
+                    </div>
+                    <section class="Containers_email">
+                        <div class="email">
+
+                            <label for="email">Email:</label>
+                            <input type="email" name="userEmail" placeholder=" YourEmail@example.com" id="email"
+                                required>
+
+                    </section>
+
+                    <div class="messages">
+
+                        <label for="message">Message:</label>
+                        <textarea name="usersMessage" id="userMessage" placeholder=" Enter your message here"
+                            required></textarea>
+
+                    </div>
+
+                    <button type="submit" class="subButton">Submit</button>
+                </section>
             </form>
 
     </section>
 
     <!---Will create a second form Listing--->
-    <section id="messages">
+    <section id="messages" class="messages_section">
         <h2>Messages</h2>
         <ul>
 

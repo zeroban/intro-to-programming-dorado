@@ -140,7 +140,6 @@ img:hover {
 /* =============== Everything below here will be for the about section and lower ========*/
 /*places an image as the background*/
 body {
-    /*background-image: url(../images/newyork.jpg);*/
     background-color: antiquewhite;
     height: 100vh;
     background-size: cover;
@@ -189,6 +188,8 @@ h3 {
     align-self: center;
     list-style: none;
     margin: 0.5%;
+    /* background-color: rgb(189, 186, 186); */
+
 }
 
 
@@ -197,7 +198,7 @@ h3 {
     float: right;
     list-style: none;
     font-weight: bold;
-    margin: 0.2% 1%;
+    margin: -1.7% 1%;
 
 
 }
@@ -250,33 +251,30 @@ h3 {
     background-color: azure;
 }
 
+.Containers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 9%;
+}
 
+#name {
+    padding: 3%;
+    margin: 0% 20px;
+}
 
-
-.name,
-.email {
-    display: inline-block;
-    font-display: none;
-    margin: 0.5% 1.5%;
-
-
+#email {
+    padding: 3%;
+    margin: 0% 20px;
+    width: 90%;
 }
 
 #userMessage {
-    width: 30%;
+    margin-top: 25%;
+    margin-left: -232%;
+    width: 233%;
     height: 100px;
-    margin-left: 1.5%;
-
 }
-
-#email,
-#name {
-    width: 114%;
-    height: 30px
-}
-
-
-
 
 
 label[for='name'],
@@ -286,17 +284,14 @@ label[for="message"] {
 }
 
 .subButton {
-    display: right;
-    margin-left: 27%;
-    bottom: -26%;
-    size: 30px;
     width: 5%;
     height: 2.5%;
     border-radius: 12px;
     background-color: rgb(240, 236, 236);
-    padding-bottom: 5px;
     text-align: center;
     font-weight: bold;
+    margin-left: -8%;
+    margin-top: 7%;
 }
 
 .subButton:hover {
@@ -306,12 +301,21 @@ label[for="message"] {
 
 }
 
+.messages_section ul {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+
+
+}
+
+
 #messages li {
     font-size: 20px;
-    border-width: 20px;
-    border-color: black;
-    margin: 1% 30px;
-    list-style: symbols();
+    border: 1px solid black;
+    list-style: none;
+    display: inline;
+    margin-right: 10px;
 }
 
 #remove_button {
@@ -335,14 +339,6 @@ label[for="message"] {
 }
 
 
-#edit_button:hover,
-#remove_button:hover {
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-
-
 
 /*=========== Footer section =================================*/
 
@@ -351,26 +347,130 @@ footer {
 }
 
 
-/* Media Query Testing */
+/*================ Below is the @media section ===============*/
 
-@media (orientation: landscape) {
+@media all and (max-width: 800px) {  /* will work for all media devices under 800px screen width*/
+    nav .navLogo ul {
+        background-color: aqua;
+        padding-left: 0px;
+        margin: 0% 0px;
+
+    }
+
+
+    nav .navLogo p {
+        font-size: 15px;
+        font-weight: bold;
+        float: left;
+        color: black;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        cursor: pointer;
+        margin-top: 25px;
+        margin-left: 10px;
+
+    }
+
+    .img ul li {
+        float: right;
+        display: block;
+        margin-top: -65px;
+        width: 30px;
+        height: 75px;
+        list-style: none;
+
+    }
+
+    nav li a:hover {
+        font-size: 20px;
+    }
+
+    .navHeader ul li a {
+        font-size: small;
+        margin-right: -20px;
+    }
+
+
+
+    img {
+        height: 25px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-size: 20px;
+        justify-content: left;
+
+    }
+
+    .about p {
+        font-size: 15px;
+
+    }
+
     body {
-        background-color: blueviolet;
+        background-color: rgb(247, 246, 199);
+    }
+
+    .skill_list ul {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        font-size: 15px;
+        font-weight: lighter;
+        margin-left: 18px;
+
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-weight: lighter;
+        font-size: 15px;
+        background-color: azure;
+
+    }
+
+    .exp li:nth-child(3),
+    .exp li:nth-child(4),
+    .exp li:nth-child(5),
+    .exp li:nth-child(6),
+    .exp li:nth-child(7) {
+        margin-left: 15%;
+        padding-top: 20px;
+        font-size: 10px;
+
+
+    }
+
+    .exp li:nth-child(2) {
+        float: left;
+        list-style: none;
+        font-weight: lighter;
+        font-size: 15px;
+        margin: 0% 15px;
+
+
     }
 
 }
 
-/* does not seem to be working correctly. VS was giving me errors but I was able to get around it */
-@media (max-width: 500px) and (orientation: portrait) { 
-    .about {
-        background-color: blue;
+@media screen and (max-width: 400px ) {
+    nav .navLogo ul {
+        background-color: rgb(194, 178, 106);
+        padding-left: 0px;
+        margin: 0% 0px;
+
     }
 
-}
-
-
-@media only screen and (max-width: 480px) {
     body {
-        background-color: brown;
+        background-color: rgb(238, 214, 183);
+        
     }
+
+
 }
