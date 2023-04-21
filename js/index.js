@@ -1,7 +1,8 @@
 //Creating List of Skills part
 
 //creating an array of technical skills
-var skills = ["Problem-Solving", "Leadership", "Web Development", "Integrated development environments (IDEs)"];
+var skills = ["Problem-Solving", "Leadership", "Web Development", "Integrated development environments (IDEs)",
+ "JavaScript", "HTML", "CSS"];
 
 //Using DOM Selection to get id and assign it to a variable 
 const skillsSection = document.getElementById("skills");
