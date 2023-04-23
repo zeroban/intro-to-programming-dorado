@@ -125,33 +125,33 @@ copyright.innerHTML ="David Jaimes " + thisYear;
 //will append the copyright element to the footer to display it "will overright the text in HTML file"
 footer.appendChild(copyright);
 
-/* ============================== lESSON-6-1 XMLHTTOREQUEST BELOW HERE================= */
 
-var githubRequest = new XMLHttpRequest();
+//============================== Lesson 6.2: Working with Fetch API ============================
 
-/*does a requestion to our personal Github account*/
-githubRequest.open('GET', 'https://api.github.com/users/zeroban/repos');
-githubRequest.send();
+fetch('https://api.github.com/users/zeroban/repos')
 
-/*function that will handle the request from Github and log it in the console. */
-githubRequest.onload = function() {
-    let repositories = JSON.parse(this.response);
-    console.log(repositories);
+    .then(function (response) {
+        //Successful response: )
+        return response.json()
+    })
 
+    .then(function (response) {
+        // console.log(response); //will log the response to console 
+        let projectSection = document.getElementById('projects');
+        let projectList = projectSection.querySelector('ul');
 
-let projectSection = document.getElementById('projects');
-let projectList = projectSection.querySelector('ul');
+        // for loop will create a new li for the number of repsitories
+        for (i = 0; i < response.length; i++) {
+            // let project = document.createElement('li');
+            var repos_buttons = document.createElement('button');
+            // var repos_description = document.createElement('p');
+            repos_buttons.class = "gitHub_links";
+            repos_buttons.innerHTML = `<a href="${response[i].html_url}">${response[i].name}</a> `;
 
-/*for loop will create a new li for the number of repsitories*/
-for (i = 0; i < repositories.length; i++) {
-    // let project = document.createElement('li');
-    var repos_buttons = document.createElement('button');
-    // var repos_description = document.createElement('p');
-    repos_buttons.class = "gitHub_links";
-    repos_buttons.innerHTML = `<a href="${repositories[i].html_url}">${repositories[i].name}</a> `;
-    
-    // project.innerHTML = repositories[i].name;
-    projectList.appendChild(repos_buttons);
-    // projectList.appendChild(project);
-}}
+            // project.innerHTML = response[i].name;
+            projectList.appendChild(repos_buttons);
+            // projectList.appendChild(project);
+        }
+    }
 
+    );
