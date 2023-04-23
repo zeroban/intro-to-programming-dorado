@@ -124,3 +124,34 @@ copyright.innerHTML ="David Jaimes " + thisYear;
 
 //will append the copyright element to the footer to display it "will overright the text in HTML file"
 footer.appendChild(copyright);
+
+/* ============================== lESSON-6-1 XMLHTTOREQUEST BELOW HERE================= */
+
+var githubRequest = new XMLHttpRequest();
+
+/*does a requestion to our personal Github account*/
+githubRequest.open('GET', 'https://api.github.com/users/zeroban/repos');
+githubRequest.send();
+
+/*function that will handle the request from Github and log it in the console. */
+githubRequest.onload = function() {
+    let repositories = JSON.parse(this.response);
+    console.log(repositories);
+
+
+let projectSection = document.getElementById('projects');
+let projectList = projectSection.querySelector('ul');
+
+/*for loop will create a new li for the number of repsitories*/
+for (i = 0; i < repositories.length; i++) {
+    // let project = document.createElement('li');
+    var repos_buttons = document.createElement('button');
+    // var repos_description = document.createElement('p');
+    repos_buttons.class = "gitHub_links";
+    repos_buttons.innerHTML = `<a href="${repositories[i].html_url}">${repositories[i].name}</a> `;
+    
+    // project.innerHTML = repositories[i].name;
+    projectList.appendChild(repos_buttons);
+    // projectList.appendChild(project);
+}}
+

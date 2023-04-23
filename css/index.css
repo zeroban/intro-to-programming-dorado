@@ -339,6 +339,44 @@ label[for="message"] {
 }
 
 
+/*==================Below controls the Project section ============*/
+
+ .project_container {
+    margin-left: 10%;
+    padding: 10px 5px;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    
+}
+
+.project_container a:link {
+    text-decoration: none;
+}
+
+.project_container ul {
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    column-gap: 5%;
+    row-gap: 5%;
+    
+
+}
+
+
+.project_container button {
+    overflow: auto;
+    font-size: 20px;
+    border-radius: 30px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    background-color: rgb(140, 248, 198);
+    
+}
+
+.project_container button:hover {
+    background-color: rgb(10, 190, 106);
+}
+
 
 /*=========== Footer section =================================*/
 
@@ -451,11 +489,23 @@ footer {
         float: left;
         list-style: none;
         font-weight: lighter;
-        font-size: 15px;
         margin: 0% 15px;
 
 
     }
+
+    .project_container {
+        margin-left: 10%;
+        padding: 10px 5px;
+        
+    }
+    
+    
+    .project_container button {
+        font-size: 10px;
+        
+    }
+
 
 }
 
@@ -472,5 +522,17 @@ footer {
         
     }
 
+    .project_container {
+        margin-left: 10%;
+        padding: 10px 5px;
+        
+    }
+
+    .project_container button {
+        font-size: 8px;
+        font-weight: bold;
+
+        
+    }
 
 }
