@@ -163,6 +163,7 @@ h3 {
     padding: 5px 5px;
     inline-size: 75%;
     list-style: none;
+    width: 80%;
 }
 
 .about,
@@ -179,7 +180,7 @@ h3 {
     justify-content: space-evenly;
     margin-left: 10%;
     margin-right: 10%;
-    font-weight: bold;
+    /* font-weight: bold; */
     background-color: azure;
 
 }
@@ -197,10 +198,7 @@ h3 {
 .exp li:nth-child(2) {
     float: right;
     list-style: none;
-    font-weight: bold;
     margin: -1.7% 1%;
-
-
 }
 
 /*controls the multiple li elements under the role title */
@@ -210,7 +208,7 @@ h3 {
 .exp li:nth-child(6),
 .exp li:nth-child(7) {
     margin-left: 15%;
-    font-size: 15px;
+    font-size: 18px;
 
 }
 
@@ -218,10 +216,9 @@ h3 {
 /* below will control the ul and all the li for the Skills section of the page */
 
 .skill_list {
-    font-weight: bold;
     background-color: azure;
     margin-left: 10%;
-    padding: 10px 5px;
+    padding: 10px 25px;
     inline-size: 80%;
     margin-bottom: 2%;
 }
@@ -443,8 +440,7 @@ footer {
     }
 
     .about p {
-        font-size: 15px;
-
+        font-size: 12px;
     }
 
     body {
@@ -467,7 +463,6 @@ footer {
         justify-content: space-evenly;
         margin-left: 10%;
         margin-right: 10%;
-        font-weight: lighter;
         font-size: 15px;
         background-color: azure;
 
@@ -480,7 +475,7 @@ footer {
     .exp li:nth-child(7) {
         margin-left: 15%;
         padding-top: 20px;
-        font-size: 10px;
+        font-size: 12px;
 
 
     }
@@ -488,7 +483,6 @@ footer {
     .exp li:nth-child(2) {
         float: left;
         list-style: none;
-        font-weight: lighter;
         margin: 0% 15px;
 
 
@@ -534,5 +528,15 @@ footer {
 
         
     }
+
+    .mySkills li {
+        font-size: 10px;
+    }
+
+    h1, h2, h3 {
+        position: center;
+    }
+
+    
 
 }
