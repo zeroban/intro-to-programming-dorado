@@ -149,10 +149,9 @@ body {
 
 
 h1,
-h2,
-h3 {
+h2 {
     color: #baff39;
-    font-size: 40px;
+    /* font-size: 40px; */
     margin-left: 150px;
     text-transform: uppercase;
 
@@ -281,10 +280,6 @@ h3 {
     width: 150%;
     height: 80px;
     margin-top: 10px;
-    /* margin-top: 25%;
-    margin-left: -232%;
-    width: 233%;
-    height: 100px; */
 }
 
 
@@ -432,19 +427,10 @@ footer {
         height: 25px;
     }
 
-    h1,
-    h2,
-    h3 {
-        font-size: 20px;
-        justify-content: left;
-
-    }
-
     .about p {
         font-size: 12px;
     }
 
-    
 
     .skill_list ul {
         display: grid;
@@ -550,16 +536,6 @@ footer {
         width: 70px;
         
       }
-
-
-      /* .img ul li {
-        float: right;
-        margin-top: -65px;
-        width: 60px;
-        height: 75px;
-        list-style: none;
-    
-    } */
     
     img {
         height: 50px;
@@ -592,7 +568,7 @@ footer {
         font-size: 10px;
     }
 
-    h1, h2, h3 {
+    h1, h2 {
         margin-left: 30%;
     }
 

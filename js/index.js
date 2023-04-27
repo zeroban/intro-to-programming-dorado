@@ -1,7 +1,7 @@
 //Creating List of Skills part
 
 //creating an array of technical skills
-var skills = ["Problem-Solving", "Leadership", "Web Development", "Integrated development environments (IDEs)",
+const skills = ["Problem-Solving", "Leadership", "Web Development", "Integrated development environments (IDEs)",
  "JavaScript", "HTML", "CSS"];
 
 //Using DOM Selection to get id and assign it to a variable 
@@ -11,7 +11,7 @@ const skillsSection = document.getElementById("skills");
 const skillsList = skillsSection.querySelector("ul");
 
 //will get the array length
-var arraylength = skills.length;
+let arraylength = skills.length;
 
 for ( var i = 0; i < arraylength; i++) {
     //will create the element "li"
@@ -109,7 +109,7 @@ document.addEventListener("submit", function(event) {
 //===================== Footer Section ================================//
 
 //Creates an object that stores the different date methods
-var theDate = new Date(),
+let theDate = new Date(),
     thisYear = theDate.getFullYear(),
     today = theDate.getDate();
 
@@ -143,7 +143,7 @@ fetch('https://api.github.com/users/zeroban/repos')
         // for loop will create a new li for the number of repsitories
         for (i = 0; i < response.length; i++) {
             // let project = document.createElement('li');
-            var repos_buttons = document.createElement('button');
+            const repos_buttons = document.createElement('button');
             // var repos_description = document.createElement('p');
             repos_buttons.class = "gitHub_links";
             repos_buttons.innerHTML = `<a href="${response[i].html_url}">${response[i].name}</a> `;
