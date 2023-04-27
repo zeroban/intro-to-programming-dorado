@@ -7,8 +7,6 @@
 }
 
 /*will create the bar at the top of the page */
-
-
 /*controls the banner name */
 nav .navLogo p {
     font-size: 30px;
@@ -138,7 +136,6 @@ img:hover {
 }
 
 /* =============== Everything below here will be for the about section and lower ========*/
-/*places an image as the background*/
 body {
     background-color: #6e6e6e;
     height: 100vh;
@@ -193,7 +190,6 @@ h2 {
     margin: 0.5%;
     margin-bottom: 10px;
     
-    /* background-color: rgb(189, 186, 186); */
 
 }
 
@@ -411,10 +407,7 @@ footer {
         width: 30px;
         height: 75px;
         list-style: none;
-
     }
-
-
 
     .navHeader ul li a {
         font-size: small;
@@ -512,7 +505,6 @@ footer {
         left: 0;
         background-color: #111;
         overflow-x: hidden;
-        /* padding-top: 16px; */
       }
 
       nav .navLogo p {
@@ -614,7 +606,6 @@ footer {
     }
 
     .subButton {
-        /* margin: 0; */
         float: left;
         bottom: 0%;
         height: 20px;

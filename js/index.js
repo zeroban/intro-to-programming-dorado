@@ -13,7 +13,7 @@ const skillsList = skillsSection.querySelector("ul");
 //will get the array length
 let arraylength = skills.length;
 
-for ( var i = 0; i < arraylength; i++) {
+for ( let i = 0; i < arraylength; i++) {
     //will create the element "li"
     const skill = document.createElement("li");
 
